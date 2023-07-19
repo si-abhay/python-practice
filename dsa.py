@@ -1,19 +1,5 @@
 
-a=input().split()
-n=int(a[0])
-l=[int(i) for i in a[1:]]
 
-#======= OR ========
-
-a=input().split()
-n=int(a[0])
-l=[]
-for i in a[1:]:
-    l.append(int(i))
-
-#input of form
-
-#n 1 2 3 4
 
 
 n=int(input())
