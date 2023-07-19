@@ -1,15 +1,3 @@
-n=int(input())
-l=[]
-for i in range(n):
-    l.append(int(input()))
-    
-#input of form
-
-#n
-#1
-#2
-#3
-#4
 
 a=input().split()
 n=int(a[0])
