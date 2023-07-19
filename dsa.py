@@ -2,10 +2,6 @@
 
 
 
-pass
-
-
-
 
 def fun(*params):
     for i in params:
