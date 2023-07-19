@@ -1,15 +1,4 @@
 
-def fun(a):
-    try :
-        print(a/0)
-    except :
-        print ("except block")
-    else:
-        print ("else block")
-    finally:
-        print("This is always run whether try block runs or except block")
-  
-fun(1)
 
 
 
