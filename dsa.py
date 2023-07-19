@@ -1,25 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-def fun(a):
-    try :
-        print(a/0)
-    except :
-        print ("except block")
-    else:
-        print ("else block")
-  
-fun(1)
-
-
-
 def fun(a):
     try :
         print(a/0)
