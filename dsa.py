@@ -2,12 +2,7 @@
 
 
 
-n=int(input())
-l=[int(i) for i in input().split()]
-#input of form
 
-#n
-#1 2 3 4
 
 
 def fun():
