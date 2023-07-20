@@ -1,12 +1,10 @@
 from array import array
-l=array('I',[1,2,3,4,5,6])
-l.append(11)
-l.remove(3)
-print(l)
+l=array('I',[])
 
-l.reverse()
-print(l)
+n=int(input())
 
-# copying into a new array
-new=array(l.typecode,[ele for ele in l])
-print(new)
+for i in range(n):
+    x=int(input(f'Enter the {i}th element'))
+    l.append(x)
+
+print(l)
