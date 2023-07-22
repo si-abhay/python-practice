@@ -1,10 +1,7 @@
-l=[1,3,2,2,4]
-map=[False for i in l]
-
-def finddup(l):
-    for i in l:
-        if map[i-1]:
-            return i
-        else:
-            map[i-1]=True
-
+n=8
+count=0
+while(n!=0):
+    if(n&1)==1:
+        count+=1
+    n>>=1
+print(count)
