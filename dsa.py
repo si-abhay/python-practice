@@ -7,3 +7,4 @@ def finddup(l):
             return i
         else:
             map[i-1]=True
+
