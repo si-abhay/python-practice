@@ -53,7 +53,19 @@ class ll:
 
             new.next = current.next
             current.next = new
+    
+    def remove_ele(self,key):
+        current=self.head
+        while(current!=None):
+            if(current.data==key):      
+                break
+            prev=current                # to store one node before
+            current=current.next        # to store current node
 
+        # Unlink the node with the key
+        prev.next = current.next
+        
+        
 
 
 list=ll()        
@@ -69,4 +81,5 @@ list.insert_begin(0)
 list.insert_end(4)
 list.insert_mid(third,3.5)
 list.insert_pos(2.5,3)              # index at which you want to add
+list.remove_ele(2) 
 list.print()           
