@@ -10,10 +10,10 @@ class ll:
         self.head=None
 
     def print(self):
-        temp=self.head   
-        while(temp!=None):
-            print(temp.data)
-            temp=temp.next
+        current=self.head   
+        while(current!=None):
+            print(current.data)
+            current=current.next
     
     def insert_begin(self,data):                  # insert node at beginning
         new=node(data)
@@ -25,10 +25,10 @@ class ll:
         if self.head is None:
             self.head=new
             return
-        temp=self.head
-        while(temp.next!=None):
-            temp=temp.next
-        temp.next=new
+        current=self.head
+        while(current.next!=None):
+            current=current.next
+        current.next=new
 
     def insert_mid(self,mid,data):              # insert AFTER given node if present
         if mid is None:
@@ -37,6 +37,22 @@ class ll:
         new=node(data)
         new.next=mid.next
         mid.next=new
+    
+    def insert_pos(self, data, position):
+
+        new = node(data)
+
+        if position == 0:
+            # Insert at the beginning of the list
+            new.next = self.head
+            self.head = new
+        else:
+            current = self.head
+            for i in range(position - 1):
+                current = current.next
+
+            new.next = current.next
+            current.next = new
 
 
 
@@ -52,4 +68,5 @@ second.next=third
 list.insert_begin(0)
 list.insert_end(4)
 list.insert_mid(third,3.5)
+list.insert_pos(2.5,3)              # index at which you want to add
 list.print()           
