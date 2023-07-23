@@ -8,20 +8,12 @@ class ll():
         self.head=None
     
     def middle(self):
-        current=self.head
-        count=0
-        while(current is not None):
-            count+=1
-            current=current.next
-        mid=(count//2)+1
-        mid-=1
-
-        current=self.head               # re initialise to start
-        while(mid>0):
-            mid-=1
-            current=current.next
-
-        return current
+        slow=self.head
+        fast=self.head
+        while(fast!=None and fast.next!=None):
+            slow=slow.next
+            fast=fast.next.next
+        return slow
 
 
 
