@@ -1,41 +1,18 @@
-#======= Singly Linked List =======#
+l=[-5, 4, 6, -3, 4, 1]
+max_sum=-float('inf')
+n=len(l)
+sum=0
+ans=[]
+ls=[]
+for i in range(n):
+    sum+=l[i]
+    ls.append(l[i])
+    if sum<0 and i !=0:
+        sum=0
+        ls.clear()
+    if max_sum<sum:
+        max_sum=sum
+        ans=ls[0:]
 
-class node:
-    def __init__(self,data):
-        self.data=data
-        self.next=None
-
-class ll:
-    def __init__(self):        
-        self.head=None
-
-    def print(self):
-        temp=self.head    
-        while(temp!=None):
-            print(temp.data)
-            temp=temp.next
-
-    def reverse(self):
-        prev = None
-        current = self.head
-        while current is not None:
-            temp = current.next
-            current.next = prev
-            prev = current
-            current = temp
-        self.head = prev
-
-
-
-list=ll()  
-
-first=node(1)
-second=node(2)
-third=node(3)
-
-list.head=first        
-first.next=second
-second.next=third
-
-list.reverse()   
-list.print()          
+print(max_sum)
+print(ans)
