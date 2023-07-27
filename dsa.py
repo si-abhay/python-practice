@@ -1,38 +1,25 @@
-class Stack:
-    def __init__(self):
-        self.st = []
+queue=[]
 
-    def is_empty(self):
-        return len(self.st) == 0
+def empty(queue):
+    return len(queue)==0
 
-    def push(self, item):
-        self.st.append(item)
+def enqueue(queue,ele):
+    #queue.append(ele)
+    queue.insert(0,ele)             # for queue insertion at front(left end) and pop from right end
+    return queue
 
-    def pop(self):
-        if not self.is_empty():
-            return self.st.pop()
-        else:
-            raise IndexError("Stack is empty. Cannot pop from an empty stack.")
+def dequeue(queue):
+    if empty(queue):
+        return
+    #return queue.pop(0)             #here pop(0)
+    return queue.pop()
 
-    def peek(self):
-        if not self.is_empty():
-            return self.st[-1]
-        else:
-            raise IndexError("Stack is empty. Cannot peek an empty stack.")
+def len_q(queue):
+    return len(queue)
 
-    def size(self):
-        return len(self.st)
-
-stack = Stack()
-stack.push(1)
-stack.push(2)
-stack.push(3)
-
-print(stack.peek())
-
-print(stack.pop())
-print(stack.pop())
-print(stack.is_empty())
-print(stack.size())
-print(stack.pop())
-print(stack.is_empty())
+enqueue(queue,1)
+enqueue(queue,2)
+enqueue(queue,3)
+print(queue)
+print(dequeue(queue))
+print(len_q(queue))
