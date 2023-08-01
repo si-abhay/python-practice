@@ -20,5 +20,6 @@ class Kangaroo(Animal):
         print("jumps around")
 
 kang=Kangaroo()
+kang.__init__()         #explicitly calling constructor
 kang.jumps()
 kang.name("kang1")
