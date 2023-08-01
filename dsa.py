@@ -1,25 +1,10 @@
 class Animal:
     def __init__(self):
         print("Animal class created")
-    def name(self,name):
-        self.name=name
-        print("Name of animal is {}".format(self.name))
-    def do(self):
-        print("Runs")
+    def name(self):
+        print("Runs at 300")
+    def name(self):
+        print("Name of animal is Gullu")
 
 ani=Animal()
-ani.name("Dog")
-print(ani.name)
-
-class Kangaroo(Animal):
-    def __init__(self):
-        super().__init__()
-        print("Kangaroo class created")
-
-    def jumps(self):
-        print("jumps around")
-
-kang=Kangaroo()
-kang.__init__()         #explicitly calling constructor
-kang.jumps()
-kang.name("kang1")
+ani.name()
