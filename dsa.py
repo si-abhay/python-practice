@@ -4,7 +4,7 @@ class Animal:
         self.name = name
         print("Animal class created")
 
-    def copy(self):
+    def copy(self):         # Copy constructor functionality C++
         new_animal = type(self)(self.age, self.name)
         return new_animal
 
