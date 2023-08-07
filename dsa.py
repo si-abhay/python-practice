@@ -1,14 +1,16 @@
-class animal:
-    def __init__(self):
-        print("Animal called")
+class duck:
+    def walk(self):
+        print("duck: thapak thapak")
 
-class snake:
-    def __init__(self):
-        print("Snake called")
-    
-class snail(animal,snake):
-    def __init__(self):
-        super().__init__()
-        print("snail called")
+class horse:
+    def walk(self):
+        print("horse: tabdak tabdak")
 
-obj=snail()  
+def fun(obj):
+    obj.walk()
+
+d=duck()
+h=horse()
+
+fun(d)
+fun(h)
