@@ -1,6 +1,6 @@
 class newNode:
     def __init__(self, data):
-        self.key = data
+        self.data = data
         self.left = None
         self.right = None
 
@@ -8,7 +8,7 @@ def inorder(temp):
     if (not temp):
         return
     inorder(temp.left)
-    print(temp.key, end=" ")
+    print(temp.data, end=" ")
     inorder(temp.right)
 
 def insert(temp,key):
@@ -31,6 +31,19 @@ def insert(temp,key):
     return temp
 
 
+def findel(temp,key):
+    global count
+    if temp is None:
+        return
+    if temp.data==key:
+        print(count)
+        return True
+    if temp.left:
+        findel(temp.left,key)
+    if temp.right:
+        findel(temp.right,key)
+    return False
+    
 
 #Driver code
 if __name__ == '__main__':
@@ -44,3 +57,4 @@ if __name__ == '__main__':
     insert(root, 12)
     print()
     inorder (root)
+    print(findel(root,7))
