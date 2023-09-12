@@ -7,10 +7,5 @@ def _lis(arr,n):
         return 1
     maxEndhere=1
     for i in range(1,n):
-        res=_lis(arr,i)
-        if arr[i-1]<arr[n-1] and res+1>maxEndhere:
-            maxEndhere=res+1
-    maxi=max(maxi,maxEndhere)
-    return maxEndhere
 
 
