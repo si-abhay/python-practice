@@ -17,5 +17,4 @@ def lis(arr):
     maxi=1
     _lis(arr,n)
     print(maxi)
-arr=[20,3,1,19,21,4,2]
-lis(arr)
+
