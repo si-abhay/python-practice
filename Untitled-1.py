@@ -12,9 +12,5 @@ def _lis(arr,n):
             maxEndhere=res+1
     maxi=max(maxi,maxEndhere)
     return maxEndhere
-def lis(arr):
-    n=len(arr)
-    maxi=1
-    _lis(arr,n)
-    print(maxi)
+
 
